@@ -28,5 +28,5 @@ int main() {
     else {
         cout << "Insufficient Funds" << endl;
     }
-    return 0;
+    retun 0;
 }
