@@ -9,11 +9,15 @@ class Packet {
 private:
     string getPacketTypeName() const;
     string getStatusName() const;
-
+    PacketType type;
+    Protocol protocol;
+    Status packetStatus;
 
 public:
+    Packet(PacketType pType, Protocol prtcl);
     string getProtocolName();
     void validatePacket();
     bool isError();
     void displayInfo();
+    void setType(PacketType newType);
 };
