@@ -2,6 +2,8 @@
 
 #include <string>
 
+using namespace std;
+
 class Artwork {
 public:
     std::string title;
@@ -10,8 +12,9 @@ public:
     std::string medium;
     double price;
     bool sold;
-
-
+    Artwork(string artTitle, string artistFullName, int artworkID, string artworkMedium, double artworkPrice);
+    Artwork(const Artwork& other);
+    Artwork(Artwork&& other) noexcept;
 
     void markAsSold();
 };

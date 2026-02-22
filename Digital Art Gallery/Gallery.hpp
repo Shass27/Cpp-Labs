@@ -12,4 +12,5 @@ public:
     void displayGallery() const;
 
     Gallery() = default;
+    Gallery(const Gallery&) = delete;
 };
