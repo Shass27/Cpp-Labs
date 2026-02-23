@@ -5,8 +5,12 @@
 #include "Exceptions.hpp"
 #include <iostream>
 
-
-
-
+class DeliveryRobot : public Robot {
+    private:
+    int batteryLevel;
+    public:
+    DeliveryRobot(const std::string &robotName, int batteryLevel) : Robot(robotName), batteryLevel(batteryLevel) {}
+    void performTask() override;
+};
 
 #endif // DELIVERY_ROBOT_HPP
