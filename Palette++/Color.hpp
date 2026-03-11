@@ -15,6 +15,15 @@ public:
     int green() const { return greenChannel; }
     int blue() const { return blueChannel; }
 
+    int operator[](int index) const;
+    Color operator+(const Color& other) const;
+    Color operator+(std::vector<int> adjustments) const;
+    Color& operator++();
+    Color& operator--();
+    Color operator*(int scale) const;
+    Color operator()(int (*transform)(int)) const;
+    bool operator==(const Color& other) const;
+
 private:
     int redChannel;
     int greenChannel;

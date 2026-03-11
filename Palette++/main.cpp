@@ -16,6 +16,19 @@ int main() {
     Color sunset = Color::fromHexLiteral("#ff4500");
     Color ocean  = Color::fromHexLiteral("#1e90ff");
 
+    Color dusk = sunset + ocean;
+    std::cout << dusk << std::endl;
+    ++dusk;
+    std::cout << dusk << std::endl;
+    std::vector<int> warmUp = {30, -10, 10};
+    dusk = dusk+warmUp;
+    std::cout << dusk << std::endl;
 
+    --sunset;
+    std::cout << sunset << std::endl;
 
+    Color duskBoost = dusk*2;
+    std::cout << dusk(ColorUtility::invert) << std::endl;
+
+    std::cout << (dusk==duskBoost ? "true" : "false") << std::endl;
 }
